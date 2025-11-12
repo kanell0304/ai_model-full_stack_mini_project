@@ -10,6 +10,20 @@ import io
 from typing import List, Dict
 from contextlib import asynccontextmanager
 
+# 모델 클래스 정의 (Jupyter Notebook과 동일)
+class FruitVegClassifier(nn.Module):
+    def __init__(self, num_classes):
+        super().__init__()
+        self.backbone = models.mobilenet_v2(weights=None)  # pretrained 대신 weights 사용
+        in_features = self.backbone.classifier[1].in_features
+        self.backbone.classifier = nn.Sequential(
+            nn.Dropout(0.3),
+            nn.Linear(in_features, num_classes)
+        )
+
+    def forward(self, x):
+        return self.backbone(x)
+
 model = None
 class_names = None
 device = None
@@ -30,8 +44,14 @@ async def lifespan(app: FastAPI):
         with open('preprocessing.json', 'r') as f:
             prep_info = json.load(f)
         
-        # 모델 로드
-        model = torch.load('fruit_vegetable_model.pth', map_location=device)
+        # 모델 구조 생성
+        num_classes = len(class_names)
+        model = FruitVegClassifier(num_classes)
+        
+        # state_dict 로드 (learned_fruit_veg_model.pth 사용)
+        state_dict = torch.load('learned_fruit_veg_model.pth', map_location=device, weights_only=True)
+        model.load_state_dict(state_dict)
+        
         model.to(device)
         model.eval()
         
@@ -42,7 +62,7 @@ async def lifespan(app: FastAPI):
             transforms.Normalize(mean=prep_info['mean'], std=prep_info['std'])
         ])
         
-        print(f"{device}로 작동하고 {len(class_names)} 클래스를 불러옴")
+        print(f"{device}로 작동하고 {len(class_names)}개의 클래스를 불러왔음")
         
     except Exception as e:
         print(f"모델을 불러오는데 오류가 발생했음: {e}")
