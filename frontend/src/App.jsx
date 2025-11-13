@@ -9,9 +9,10 @@ export default function App() {
 
   const onSubmit = async(e) => {
     e.preventDefault()
+    setOutput("Loading...")
     if(!file) return
     const result = await getPred(file)
-    setOutput(result.predicted_class) // FastAPI 반환값 기준
+    setOutput(result) // FastAPI 반환값 기준
   }
 
   const fileupload=(e)=>{
@@ -29,7 +30,11 @@ export default function App() {
       </form>
 
       {preview && <img src={preview} alt="preview" width="300"/>}
-      {output && <p>결과: {output}</p>}
+      {output && 
+      <>
+      <p>결과: {output.predicted_class}</p>
+      <p>정확도: {output.confidence}%</p>
+      </>}
     </div>
   )
 }
