@@ -9,7 +9,7 @@ export default function App() {
 
   const onSubmit = async(e) => {
     e.preventDefault()
-    setOutput("Loading...")
+    setOutput({"predicted_class": "Loading...", "confidence": "Loading..."})
     if(!file) return
     const result = await getPred(file)
     setOutput(result) // FastAPI 반환값 기준
@@ -33,7 +33,7 @@ export default function App() {
       {output && 
       <>
       <p>결과: {output.predicted_class}</p>
-      <p>정확도: {output.confidence}%</p>
+      <p>정확도: {output.confidence}</p>
       </>}
     </div>
   )
