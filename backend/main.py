@@ -1,8 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from transformers import pipeline
 from PIL import Image
+from model import predict_a_image
+import io
+
+
 
 app=FastAPI(title="이미지 텍스트 변환")
 
@@ -14,16 +16,21 @@ app.add_middleware(
     allow_headers=["*"],  
 )
 
-image_to_text = pipeline("image-to-text", model="Salesforce/blip-image-captioning-base")
+@app.get("/")
+def root():
+    return {"status": "ok"}
 
-class GetImage(BaseModel):
-    path:str
+@app.post("/predict")
+async def predict(file: UploadFile = File(...)):
+   
+    content = await file.read()
+    image = Image.open(io.BytesIO(content)).convert("RGB")
 
-@app.post('/predict')
-def predict(get_image:GetImage):
-    img = Image.open(get_image.path)
-    result = image_to_text(img)
+    label_idx, label_name, confidence = predict_a_image(image)
 
-    return(result)
+    return {
+        "label_name" : label_name,
+        "confidence": confidence
+    }
 
 # uvicorn main:app --port=8081 --reload

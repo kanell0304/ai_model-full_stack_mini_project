@@ -1,24 +1,16 @@
-import axios from 'axios'
+export function usePred() {
+  const getPred = async (formData) => {
+    const res = await fetch('http://localhost:8081/predict', {
+      method: 'POST',
+      body: formData,
+    });
 
-const API_BASE_URL = 'http://localhost:8081'
-
-const api = axios.create({
-    baseURL: API_BASE_URL,
-    headers: {
-        'Content-Type': 'application/json',
-    },
-})
-
-export const usePred = () => {
-
-  const getPred = async (path) => {
-    try {
-      const response = await api.post('/predict', { path })
-      return response.data
-    } catch (err) {
-      console.error(err.response?.data || err.message)
-      throw err 
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
     }
-  }
-  return {getPred}
+
+    return res.json();
+  };
+
+  return { getPred };
 }
