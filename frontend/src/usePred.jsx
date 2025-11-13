@@ -10,15 +10,21 @@ const api = axios.create({
 })
 
 export const usePred = () => {
+  const getPred = async(file)=>{
+    try{
+      const formData = new FormData()
+      formData.append('file', file)
 
-  const getPred = async (path) => {
-    try {
-      const response = await api.post('/predict', { path })
+      const response = await api.post('/predict', formData, {
+        headers: {'Content-Type': 'multipart/form-data'},
+      })
+
       return response.data
-    } catch (err) {
+    }
+    catch(err){
       console.error(err.response?.data || err.message)
-      throw err 
+      throw err
     }
   }
-  return {getPred}
+  return{getPred}
 }
