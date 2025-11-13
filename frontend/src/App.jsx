@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { usePred } from './usePred'
+import './App.css'
 
 export default function App() {
   const [file, setFile] = useState(null)
@@ -23,18 +24,21 @@ export default function App() {
   }
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
+    <div className="container">
+      <h2>이미지 분류기</h2>
+      <form onSubmit={onSubmit} className="upload-box">
         <input type="file" accept="image/*" onChange={fileupload}/>
         <button type="submit">예측하기</button>
       </form>
 
-      {preview && <img src={preview} alt="preview" width="300"/>}
-      {output && 
-      <>
-      <p>결과: {output.predicted_class}</p>
-      <p>정확도: {output.confidence}</p>
-      </>}
+      {preview && (<div className="preview"><img src={preview} alt="preview"/></div>)}
+
+      {output && (
+        <div className="result-box">
+          <p><strong>결과</strong>: {output.predicted_class}</p>
+          <p><strong>정확도</strong>: {output.confidence}</p>
+        </div>
+      )}
     </div>
   )
 }
