@@ -74,7 +74,7 @@ app = FastAPI(title="과일/채소 이미지 분류 API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:8081"],
+    allow_origins=["http://localhost:3000", "http://localhost:8081", "http://localhost:5173"],
     allow_credentials=True,
     allow_methods=["*"],  
     allow_headers=["*"],  
