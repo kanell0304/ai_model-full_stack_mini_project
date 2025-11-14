@@ -7,23 +7,27 @@ import torch.nn.functional as F
 import json
 
 
-LABEL_TYPE='coarse'
+LABEL_TYPE='coarse' # 세분류 말고 대분류 범주 사용
 IMG_SIZE=128
 BATCH_SIZE=16
 EPOCHS=30
-NUM_CLASSES=43 if LABEL_TYPE == 'coarse' else 81
+NUM_CLASSES=43 if LABEL_TYPE == 'coarse' else 81 # coarse 라벨 기준
 
 
 BASE_DIR = Path(__file__).resolve().parent
-MODEL_PATH = BASE_DIR / "models" / "grocery_cnn_coarse.pth"
-CLASS_PATH = BASE_DIR / "models" / "class_names_coarse.json"
+MODEL_PATH = BASE_DIR / "models" / "grocery_cnn_coarse.pth" # 학습 끝난 모델 파라미터 위치
+CLASS_PATH = BASE_DIR / "models" / "class_names_coarse.json" # 각 인덱스/라벨 이름 매핑 json
 
+
+# 인덱스로 접근하여 한글/영문 클래스 이름 추출
 with open(CLASS_PATH, "r", encoding="utf-8") as f:
    CLASS_NAMES = json.load(f)
 
 device=torch.device("cpu")
 
 
+
+# cnn 모델 정의
 class GroceryStoreCNN(nn.Module):
   def __init__(self, num_classes=NUM_CLASSES):
     super().__init__()
@@ -70,6 +74,7 @@ transform = transforms.Compose([
 ])
 
 
+# 모델 로드
 def load_model():
     model = GroceryStoreCNN(num_classes=NUM_CLASSES)
     state = torch.load(MODEL_PATH, map_location=device)
@@ -81,7 +86,8 @@ def load_model():
 MODEL = load_model()
 
 
-def predict_a_image(image: Image.Image):
+# 예측 함수
+def predict_a_image(image: Image.Image): # 입력 : PIL.Image
     img = transform(image).unsqueeze(0).to(device)
 
     with torch.no_grad():
@@ -89,9 +95,9 @@ def predict_a_image(image: Image.Image):
         confidence = F.softmax(outputs, dim=1)
         top_con, top_idx = torch.max(confidence, dim=1)
 
-    pred_idx = int(top_idx.item())
-    confi = float(top_con.item())
-    class_name = CLASS_NAMES[pred_idx]
+    pred_idx = int(top_idx.item()) # 예측 클래스 인덱스
+    confi = float(top_con.item()) # 신뢰도
+    class_name = CLASS_NAMES[pred_idx] # 인덱스에 해당하는 클래스 이름
 
     return pred_idx, class_name, confi
 

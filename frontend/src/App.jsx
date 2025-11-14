@@ -3,11 +3,12 @@ import { usePred } from './usePred';
 import './App.css'
 
 export default function App() {
-  const [file, setFile] = useState(null);
-  const [output, setOutput] = useState('');
-  const [image, setImage] = useState(null);
+  const [file, setFile] = useState(null); // 실제 파일 데이터
+  const [output, setOutput] = useState(''); // 결과 문구
+  const [image, setImage] = useState(null); // 미리보기 이미지 url
   const { getPred } = usePred();
 
+  // 폼 제출
   const onSubmit = async (e) => {
     e.preventDefault();
     if (!file) {
@@ -16,24 +17,26 @@ export default function App() {
     }
 
     const formData = new FormData();
-    formData.append('file', file);
+    formData.append('file', file); // FormData에 file이라는 이름으로 이미지 파일을 담음
 
     
-    const result = await getPred(formData);
+    const result = await getPred(formData); // getPred 호출
     const percent = (result.confidence * 100).toFixed(2);
 
     setOutput(`이 사진은 무엇일까요? : ${result.label_name}, 절 이정도 믿으세요 : ${percent}%`);
   };
 
+  // 파일 선택
   const onFileChange=(e)=>{
     const selected = e.target.files && e.target.files[0];
 
-    if(!selected) {
+    if(!selected) { // 선택된 사진이 없으면 null
       setFile(null);
       setImage(null);
       return;
     }
-    setFile(selected)
+
+    setFile(selected) // 있으면 selected 실제 파일 저장
     setImage(URL.createObjectURL(selected));
   }
 
