@@ -1,0 +1,1900 @@
+Index: frontend/node_modules/@babel/preset-env/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/@babel/preset-env/node_modules/.bin/semver b/frontend/node_modules/@babel/preset-env/node_modules/.bin/semver
+--- a/frontend/node_modules/@babel/preset-env/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/@babel/preset-env/node_modules/.bin/semver	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver b/frontend/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver
+--- a/frontend/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/@eslint/eslintrc/node_modules/.bin/js-yaml
+===================================================================
+diff --git a/frontend/node_modules/@eslint/eslintrc/node_modules/.bin/js-yaml b/frontend/node_modules/@eslint/eslintrc/node_modules/.bin/js-yaml
+--- a/frontend/node_modules/@eslint/eslintrc/node_modules/.bin/js-yaml	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/@eslint/eslintrc/node_modules/.bin/js-yaml	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../js-yaml/bin/js-yaml.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../js-yaml/bin/js-yaml.js" "$@"
++else 
++  exec node  "$basedir/../js-yaml/bin/js-yaml.js" "$@"
++fi
+Index: frontend/node_modules/eslint-plugin-react/node_modules/.bin/resolve
+===================================================================
+diff --git a/frontend/node_modules/eslint-plugin-react/node_modules/.bin/resolve b/frontend/node_modules/eslint-plugin-react/node_modules/.bin/resolve
+--- a/frontend/node_modules/eslint-plugin-react/node_modules/.bin/resolve	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/eslint-plugin-react/node_modules/.bin/resolve	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../resolve/bin/resolve
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../resolve/bin/resolve" "$@"
++else 
++  exec node  "$basedir/../resolve/bin/resolve" "$@"
++fi
+Index: frontend/node_modules/static-eval/node_modules/.bin/escodegen
+===================================================================
+diff --git a/frontend/node_modules/static-eval/node_modules/.bin/escodegen b/frontend/node_modules/static-eval/node_modules/.bin/escodegen
+--- a/frontend/node_modules/static-eval/node_modules/.bin/escodegen	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/static-eval/node_modules/.bin/escodegen	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../escodegen/bin/escodegen.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../escodegen/bin/escodegen.js" "$@"
++else 
++  exec node  "$basedir/../escodegen/bin/escodegen.js" "$@"
++fi
+Index: frontend/node_modules/tailwindcss/node_modules/.bin/yaml
+===================================================================
+diff --git a/frontend/node_modules/tailwindcss/node_modules/.bin/yaml b/frontend/node_modules/tailwindcss/node_modules/.bin/yaml
+--- a/frontend/node_modules/tailwindcss/node_modules/.bin/yaml	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/tailwindcss/node_modules/.bin/yaml	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../yaml/bin.mjs
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../yaml/bin.mjs" "$@"
++else 
++  exec node  "$basedir/../yaml/bin.mjs" "$@"
++fi
+Index: frontend/node_modules/istanbul-lib-instrument/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/istanbul-lib-instrument/node_modules/.bin/semver b/frontend/node_modules/istanbul-lib-instrument/node_modules/.bin/semver
+--- a/frontend/node_modules/istanbul-lib-instrument/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/istanbul-lib-instrument/node_modules/.bin/semver	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/jsonpath/node_modules/.bin/esparse
+===================================================================
+diff --git a/frontend/node_modules/jsonpath/node_modules/.bin/esparse b/frontend/node_modules/jsonpath/node_modules/.bin/esparse
+--- a/frontend/node_modules/jsonpath/node_modules/.bin/esparse	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/jsonpath/node_modules/.bin/esparse	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../esprima/bin/esparse.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../esprima/bin/esparse.js" "$@"
++else 
++  exec node  "$basedir/../esprima/bin/esparse.js" "$@"
++fi
+Index: frontend/node_modules/.bin/detect-port
+===================================================================
+diff --git a/frontend/node_modules/.bin/detect-port b/frontend/node_modules/.bin/detect-port
+--- a/frontend/node_modules/.bin/detect-port	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/detect-port	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../detect-port-alt/bin/detect-port
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../detect-port-alt/bin/detect-port" "$@"
++else 
++  exec node  "$basedir/../detect-port-alt/bin/detect-port" "$@"
++fi
+Index: frontend/node_modules/.bin/cssesc
+===================================================================
+diff --git a/frontend/node_modules/.bin/cssesc b/frontend/node_modules/.bin/cssesc
+--- a/frontend/node_modules/.bin/cssesc	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/cssesc	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../cssesc/bin/cssesc
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../cssesc/bin/cssesc" "$@"
++else 
++  exec node  "$basedir/../cssesc/bin/cssesc" "$@"
++fi
+Index: frontend/node_modules/.bin/css-prefers-color-scheme
+===================================================================
+diff --git a/frontend/node_modules/.bin/css-prefers-color-scheme b/frontend/node_modules/.bin/css-prefers-color-scheme
+--- a/frontend/node_modules/.bin/css-prefers-color-scheme	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/css-prefers-color-scheme	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../css-prefers-color-scheme/dist/cli.cjs
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../css-prefers-color-scheme/dist/cli.cjs" "$@"
++else 
++  exec node  "$basedir/../css-prefers-color-scheme/dist/cli.cjs" "$@"
++fi
+Index: frontend/node_modules/.bin/css-blank-pseudo
+===================================================================
+diff --git a/frontend/node_modules/.bin/css-blank-pseudo b/frontend/node_modules/.bin/css-blank-pseudo
+--- a/frontend/node_modules/.bin/css-blank-pseudo	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/css-blank-pseudo	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../css-blank-pseudo/dist/cli.cjs
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../css-blank-pseudo/dist/cli.cjs" "$@"
++else 
++  exec node  "$basedir/../css-blank-pseudo/dist/cli.cjs" "$@"
++fi
+Index: frontend/node_modules/.bin/browserslist
+===================================================================
+diff --git a/frontend/node_modules/.bin/browserslist b/frontend/node_modules/.bin/browserslist
+--- a/frontend/node_modules/.bin/browserslist	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/browserslist	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../browserslist/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../browserslist/cli.js" "$@"
++else 
++  exec node  "$basedir/../browserslist/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/import-local-fixture
+===================================================================
+diff --git a/frontend/node_modules/.bin/import-local-fixture b/frontend/node_modules/.bin/import-local-fixture
+--- a/frontend/node_modules/.bin/import-local-fixture	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/import-local-fixture	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../import-local/fixtures/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../import-local/fixtures/cli.js" "$@"
++else 
++  exec node  "$basedir/../import-local/fixtures/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/he
+===================================================================
+diff --git a/frontend/node_modules/.bin/he b/frontend/node_modules/.bin/he
+--- a/frontend/node_modules/.bin/he	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/he	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../he/bin/he
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../he/bin/he" "$@"
++else 
++  exec node  "$basedir/../he/bin/he" "$@"
++fi
+Index: frontend/node_modules/.bin/esparse
+===================================================================
+diff --git a/frontend/node_modules/.bin/esparse b/frontend/node_modules/.bin/esparse
+--- a/frontend/node_modules/.bin/esparse	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/esparse	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../esprima/bin/esparse.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../esprima/bin/esparse.js" "$@"
++else 
++  exec node  "$basedir/../esprima/bin/esparse.js" "$@"
++fi
+Index: frontend/node_modules/.bin/eslint
+===================================================================
+diff --git a/frontend/node_modules/.bin/eslint b/frontend/node_modules/.bin/eslint
+--- a/frontend/node_modules/.bin/eslint	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/eslint	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../eslint/bin/eslint.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../eslint/bin/eslint.js" "$@"
++else 
++  exec node  "$basedir/../eslint/bin/eslint.js" "$@"
++fi
+Index: frontend/node_modules/.bin/json5
+===================================================================
+diff --git a/frontend/node_modules/.bin/json5 b/frontend/node_modules/.bin/json5
+--- a/frontend/node_modules/.bin/json5	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/json5	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../json5/lib/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../json5/lib/cli.js" "$@"
++else 
++  exec node  "$basedir/../json5/lib/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/jsesc
+===================================================================
+diff --git a/frontend/node_modules/.bin/jsesc b/frontend/node_modules/.bin/jsesc
+--- a/frontend/node_modules/.bin/jsesc	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/jsesc	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../jsesc/bin/jsesc
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../jsesc/bin/jsesc" "$@"
++else 
++  exec node  "$basedir/../jsesc/bin/jsesc" "$@"
++fi
+Index: frontend/node_modules/.bin/jake
+===================================================================
+diff --git a/frontend/node_modules/.bin/jake b/frontend/node_modules/.bin/jake
+--- a/frontend/node_modules/.bin/jake	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/jake	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../jake/bin/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../jake/bin/cli.js" "$@"
++else 
++  exec node  "$basedir/../jake/bin/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/is-docker
+===================================================================
+diff --git a/frontend/node_modules/.bin/is-docker b/frontend/node_modules/.bin/is-docker
+--- a/frontend/node_modules/.bin/is-docker	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/is-docker	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../is-docker/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../is-docker/cli.js" "$@"
++else 
++  exec node  "$basedir/../is-docker/cli.js" "$@"
++fi
+Index: frontend/node_modules/global-prefix/node_modules/.bin/which
+===================================================================
+diff --git a/frontend/node_modules/global-prefix/node_modules/.bin/which b/frontend/node_modules/global-prefix/node_modules/.bin/which
+--- a/frontend/node_modules/global-prefix/node_modules/.bin/which	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/global-prefix/node_modules/.bin/which	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../which/bin/which
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../which/bin/which" "$@"
++else 
++  exec node  "$basedir/../which/bin/which" "$@"
++fi
+Index: frontend/node_modules/.bin/parser
+===================================================================
+diff --git a/frontend/node_modules/.bin/parser b/frontend/node_modules/.bin/parser
+--- a/frontend/node_modules/.bin/parser	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/parser	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../@babel/parser/bin/babel-parser.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../@babel/parser/bin/babel-parser.js" "$@"
++else 
++  exec node  "$basedir/../@babel/parser/bin/babel-parser.js" "$@"
++fi
+Index: frontend/node_modules/.bin/rollup
+===================================================================
+diff --git a/frontend/node_modules/.bin/rollup b/frontend/node_modules/.bin/rollup
+--- a/frontend/node_modules/.bin/rollup	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/rollup	(date 1763023007149)
+@@ -1,1 +1,16 @@
+-../rollup/dist/bin/rollup
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../rollup/dist/bin/rollup" "$@"
++else 
++  exec node  "$basedir/../rollup/dist/bin/rollup" "$@"
++fi
+Index: frontend/node_modules/.bin/tsc
+===================================================================
+diff --git a/frontend/node_modules/.bin/tsc b/frontend/node_modules/.bin/tsc
+--- a/frontend/node_modules/.bin/tsc	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/tsc	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../typescript/bin/tsc
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../typescript/bin/tsc" "$@"
++else 
++  exec node  "$basedir/../typescript/bin/tsc" "$@"
++fi
+Index: frontend/node_modules/.bin/webpack-dev-server
+===================================================================
+diff --git a/frontend/node_modules/.bin/webpack-dev-server b/frontend/node_modules/.bin/webpack-dev-server
+--- a/frontend/node_modules/.bin/webpack-dev-server	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/webpack-dev-server	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../webpack-dev-server/bin/webpack-dev-server.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../webpack-dev-server/bin/webpack-dev-server.js" "$@"
++else 
++  exec node  "$basedir/../webpack-dev-server/bin/webpack-dev-server.js" "$@"
++fi
+Index: frontend/node_modules/.cache/.eslintcache
+===================================================================
+diff --git a/frontend/node_modules/.cache/.eslintcache b/frontend/node_modules/.cache/.eslintcache
+--- a/frontend/node_modules/.cache/.eslintcache	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.cache/.eslintcache	(date 1763023027437)
+@@ -1,1 +1,1 @@
+-[{"/Users/hataeho/Documents/hello/frontend/src/index.js":"1","/Users/hataeho/Documents/hello/frontend/src/App.js":"2","/Users/hataeho/Documents/hello/frontend/src/usePred.jsx":"3"},{"size":188,"mtime":1763005949602,"results":"4","hashOfConfig":"5"},{"size":926,"mtime":1763007142624,"results":"6","hashOfConfig":"5"},{"size":558,"mtime":1763007151437,"results":"7","hashOfConfig":"5"},{"filePath":"8","messages":"9","suppressedMessages":"10","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"12zgnfw",{"filePath":"11","messages":"12","suppressedMessages":"13","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"14","messages":"15","suppressedMessages":"16","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"/Users/hataeho/Documents/hello/frontend/src/index.js",[],[],"/Users/hataeho/Documents/hello/frontend/src/App.js",[],[],"/Users/hataeho/Documents/hello/frontend/src/usePred.jsx",[],[]]
+\ No newline at end of file
++[{"C:\\IBMxRedHat4\\MiniProject\\frontend\\src\\index.js":"1","C:\\IBMxRedHat4\\MiniProject\\frontend\\src\\App.js":"2","C:\\IBMxRedHat4\\MiniProject\\frontend\\src\\usePred.jsx":"3"},{"size":197,"mtime":1762998978125,"results":"4","hashOfConfig":"5"},{"size":960,"mtime":1763022866995,"results":"6","hashOfConfig":"5"},{"size":584,"mtime":1763022866998,"results":"7","hashOfConfig":"5"},{"filePath":"8","messages":"9","suppressedMessages":"10","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"zhvyul",{"filePath":"11","messages":"12","suppressedMessages":"13","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"14","messages":"15","suppressedMessages":"16","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"C:\\IBMxRedHat4\\MiniProject\\frontend\\src\\index.js",[],[],"C:\\IBMxRedHat4\\MiniProject\\frontend\\src\\App.js",[],[],"C:\\IBMxRedHat4\\MiniProject\\frontend\\src\\usePred.jsx",[],[]]
+\ No newline at end of file
+Index: frontend/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver b/frontend/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver
+--- a/frontend/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver b/frontend/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver
+--- a/frontend/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/eslint/node_modules/.bin/js-yaml
+===================================================================
+diff --git a/frontend/node_modules/eslint/node_modules/.bin/js-yaml b/frontend/node_modules/eslint/node_modules/.bin/js-yaml
+--- a/frontend/node_modules/eslint/node_modules/.bin/js-yaml	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/eslint/node_modules/.bin/js-yaml	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../js-yaml/bin/js-yaml.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../js-yaml/bin/js-yaml.js" "$@"
++else 
++  exec node  "$basedir/../js-yaml/bin/js-yaml.js" "$@"
++fi
+Index: frontend/node_modules/eslint-plugin-react/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/eslint-plugin-react/node_modules/.bin/semver b/frontend/node_modules/eslint-plugin-react/node_modules/.bin/semver
+--- a/frontend/node_modules/eslint-plugin-react/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/eslint-plugin-react/node_modules/.bin/semver	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/tsconfig-paths/node_modules/.bin/json5
+===================================================================
+diff --git a/frontend/node_modules/tsconfig-paths/node_modules/.bin/json5 b/frontend/node_modules/tsconfig-paths/node_modules/.bin/json5
+--- a/frontend/node_modules/tsconfig-paths/node_modules/.bin/json5	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/tsconfig-paths/node_modules/.bin/json5	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../json5/lib/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../json5/lib/cli.js" "$@"
++else 
++  exec node  "$basedir/../json5/lib/cli.js" "$@"
++fi
+Index: frontend/node_modules/eslint-plugin-import/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/eslint-plugin-import/node_modules/.bin/semver b/frontend/node_modules/eslint-plugin-import/node_modules/.bin/semver
+--- a/frontend/node_modules/eslint-plugin-import/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/eslint-plugin-import/node_modules/.bin/semver	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/static-eval/node_modules/.bin/esgenerate
+===================================================================
+diff --git a/frontend/node_modules/static-eval/node_modules/.bin/esgenerate b/frontend/node_modules/static-eval/node_modules/.bin/esgenerate
+--- a/frontend/node_modules/static-eval/node_modules/.bin/esgenerate	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/static-eval/node_modules/.bin/esgenerate	(date 1763023007146)
+@@ -1,1 +1,16 @@
+-../escodegen/bin/esgenerate.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../escodegen/bin/esgenerate.js" "$@"
++else 
++  exec node  "$basedir/../escodegen/bin/esgenerate.js" "$@"
++fi
+Index: frontend/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver b/frontend/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver
+--- a/frontend/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/jsonpath/node_modules/.bin/esvalidate
+===================================================================
+diff --git a/frontend/node_modules/jsonpath/node_modules/.bin/esvalidate b/frontend/node_modules/jsonpath/node_modules/.bin/esvalidate
+--- a/frontend/node_modules/jsonpath/node_modules/.bin/esvalidate	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/jsonpath/node_modules/.bin/esvalidate	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../esprima/bin/esvalidate.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../esprima/bin/esvalidate.js" "$@"
++else 
++  exec node  "$basedir/../esprima/bin/esvalidate.js" "$@"
++fi
+Index: frontend/node_modules/make-dir/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/make-dir/node_modules/.bin/semver b/frontend/node_modules/make-dir/node_modules/.bin/semver
+--- a/frontend/node_modules/make-dir/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/make-dir/node_modules/.bin/semver	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/postcss-svgo/node_modules/.bin/svgo
+===================================================================
+diff --git a/frontend/node_modules/postcss-svgo/node_modules/.bin/svgo b/frontend/node_modules/postcss-svgo/node_modules/.bin/svgo
+--- a/frontend/node_modules/postcss-svgo/node_modules/.bin/svgo	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/postcss-svgo/node_modules/.bin/svgo	(date 1763023007142)
+@@ -1,1 +1,16 @@
+-../svgo/bin/svgo
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../svgo/bin/svgo" "$@"
++else 
++  exec node  "$basedir/../svgo/bin/svgo" "$@"
++fi
+Index: frontend/node_modules/.bin/css-has-pseudo
+===================================================================
+diff --git a/frontend/node_modules/.bin/css-has-pseudo b/frontend/node_modules/.bin/css-has-pseudo
+--- a/frontend/node_modules/.bin/css-has-pseudo	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/css-has-pseudo	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../css-has-pseudo/dist/cli.cjs
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../css-has-pseudo/dist/cli.cjs" "$@"
++else 
++  exec node  "$basedir/../css-has-pseudo/dist/cli.cjs" "$@"
++fi
+Index: frontend/node_modules/.bin/html-minifier-terser
+===================================================================
+diff --git a/frontend/node_modules/.bin/html-minifier-terser b/frontend/node_modules/.bin/html-minifier-terser
+--- a/frontend/node_modules/.bin/html-minifier-terser	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/html-minifier-terser	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../html-minifier-terser/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../html-minifier-terser/cli.js" "$@"
++else 
++  exec node  "$basedir/../html-minifier-terser/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/esgenerate
+===================================================================
+diff --git a/frontend/node_modules/.bin/esgenerate b/frontend/node_modules/.bin/esgenerate
+--- a/frontend/node_modules/.bin/esgenerate	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/esgenerate	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../escodegen/bin/esgenerate.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../escodegen/bin/esgenerate.js" "$@"
++else 
++  exec node  "$basedir/../escodegen/bin/esgenerate.js" "$@"
++fi
+Index: frontend/node_modules/.bin/loose-envify
+===================================================================
+diff --git a/frontend/node_modules/.bin/loose-envify b/frontend/node_modules/.bin/loose-envify
+--- a/frontend/node_modules/.bin/loose-envify	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/loose-envify	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../loose-envify/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../loose-envify/cli.js" "$@"
++else 
++  exec node  "$basedir/../loose-envify/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/react-scripts
+===================================================================
+diff --git a/frontend/node_modules/.bin/react-scripts b/frontend/node_modules/.bin/react-scripts
+--- a/frontend/node_modules/.bin/react-scripts	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/react-scripts	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../react-scripts/bin/react-scripts.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../react-scripts/bin/react-scripts.js" "$@"
++else 
++  exec node  "$basedir/../react-scripts/bin/react-scripts.js" "$@"
++fi
+Index: frontend/node_modules/.bin/multicast-dns
+===================================================================
+diff --git a/frontend/node_modules/.bin/multicast-dns b/frontend/node_modules/.bin/multicast-dns
+--- a/frontend/node_modules/.bin/multicast-dns	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/multicast-dns	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../multicast-dns/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../multicast-dns/cli.js" "$@"
++else 
++  exec node  "$basedir/../multicast-dns/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/mkdirp
+===================================================================
+diff --git a/frontend/node_modules/.bin/mkdirp b/frontend/node_modules/.bin/mkdirp
+--- a/frontend/node_modules/.bin/mkdirp	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/mkdirp	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../mkdirp/bin/cmd.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../mkdirp/bin/cmd.js" "$@"
++else 
++  exec node  "$basedir/../mkdirp/bin/cmd.js" "$@"
++fi
+Index: frontend/node_modules/.bin/svgo
+===================================================================
+diff --git a/frontend/node_modules/.bin/svgo b/frontend/node_modules/.bin/svgo
+--- a/frontend/node_modules/.bin/svgo	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/svgo	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../svgo/bin/svgo
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../svgo/bin/svgo" "$@"
++else 
++  exec node  "$basedir/../svgo/bin/svgo" "$@"
++fi
+Index: frontend/node_modules/.bin/sucrase-node
+===================================================================
+diff --git a/frontend/node_modules/.bin/sucrase-node b/frontend/node_modules/.bin/sucrase-node
+--- a/frontend/node_modules/.bin/sucrase-node	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/sucrase-node	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../sucrase/bin/sucrase-node
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../sucrase/bin/sucrase-node" "$@"
++else 
++  exec node  "$basedir/../sucrase/bin/sucrase-node" "$@"
++fi
+Index: frontend/node_modules/.bin/rimraf
+===================================================================
+diff --git a/frontend/node_modules/.bin/rimraf b/frontend/node_modules/.bin/rimraf
+--- a/frontend/node_modules/.bin/rimraf	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/rimraf	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../rimraf/bin.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../rimraf/bin.js" "$@"
++else 
++  exec node  "$basedir/../rimraf/bin.js" "$@"
++fi
+Index: frontend/node_modules/.bin/resolve
+===================================================================
+diff --git a/frontend/node_modules/.bin/resolve b/frontend/node_modules/.bin/resolve
+--- a/frontend/node_modules/.bin/resolve	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/resolve	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../resolve/bin/resolve
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../resolve/bin/resolve" "$@"
++else 
++  exec node  "$basedir/../resolve/bin/resolve" "$@"
++fi
+Index: frontend/node_modules/.bin/webpack
+===================================================================
+diff --git a/frontend/node_modules/.bin/webpack b/frontend/node_modules/.bin/webpack
+--- a/frontend/node_modules/.bin/webpack	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/webpack	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../webpack/bin/webpack.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../webpack/bin/webpack.js" "$@"
++else 
++  exec node  "$basedir/../webpack/bin/webpack.js" "$@"
++fi
+Index: frontend/node_modules/.bin/uuid
+===================================================================
+diff --git a/frontend/node_modules/.bin/uuid b/frontend/node_modules/.bin/uuid
+--- a/frontend/node_modules/.bin/uuid	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/uuid	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../uuid/dist/bin/uuid
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../uuid/dist/bin/uuid" "$@"
++else 
++  exec node  "$basedir/../uuid/dist/bin/uuid" "$@"
++fi
+Index: frontend/node_modules/.bin/tailwindcss
+===================================================================
+diff --git a/frontend/node_modules/.bin/tailwindcss b/frontend/node_modules/.bin/tailwindcss
+--- a/frontend/node_modules/.bin/tailwindcss	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/tailwindcss	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../tailwindcss/lib/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../tailwindcss/lib/cli.js" "$@"
++else 
++  exec node  "$basedir/../tailwindcss/lib/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/tailwind
+===================================================================
+diff --git a/frontend/node_modules/.bin/tailwind b/frontend/node_modules/.bin/tailwind
+--- a/frontend/node_modules/.bin/tailwind	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/tailwind	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../tailwindcss/lib/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../tailwindcss/lib/cli.js" "$@"
++else 
++  exec node  "$basedir/../tailwindcss/lib/cli.js" "$@"
++fi
+Index: frontend/node_modules/@babel/core/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/@babel/core/node_modules/.bin/semver b/frontend/node_modules/@babel/core/node_modules/.bin/semver
+--- a/frontend/node_modules/@babel/core/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/@babel/core/node_modules/.bin/semver	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/sucrase/node_modules/.bin/glob
+===================================================================
+diff --git a/frontend/node_modules/sucrase/node_modules/.bin/glob b/frontend/node_modules/sucrase/node_modules/.bin/glob
+--- a/frontend/node_modules/sucrase/node_modules/.bin/glob	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/sucrase/node_modules/.bin/glob	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../glob/dist/esm/bin.mjs
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../glob/dist/esm/bin.mjs" "$@"
++else 
++  exec node  "$basedir/../glob/dist/esm/bin.mjs" "$@"
++fi
+Index: frontend/node_modules/.bin/baseline-browser-mapping
+===================================================================
+diff --git a/frontend/node_modules/.bin/baseline-browser-mapping b/frontend/node_modules/.bin/baseline-browser-mapping
+--- a/frontend/node_modules/.bin/baseline-browser-mapping	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/baseline-browser-mapping	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../baseline-browser-mapping/dist/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../baseline-browser-mapping/dist/cli.js" "$@"
++else 
++  exec node  "$basedir/../baseline-browser-mapping/dist/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/ansi-html
+===================================================================
+diff --git a/frontend/node_modules/.bin/ansi-html b/frontend/node_modules/.bin/ansi-html
+--- a/frontend/node_modules/.bin/ansi-html	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/ansi-html	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../ansi-html/bin/ansi-html
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../ansi-html/bin/ansi-html" "$@"
++else 
++  exec node  "$basedir/../ansi-html/bin/ansi-html" "$@"
++fi
+Index: frontend/node_modules/.bin/acorn
+===================================================================
+diff --git a/frontend/node_modules/.bin/acorn b/frontend/node_modules/.bin/acorn
+--- a/frontend/node_modules/.bin/acorn	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/acorn	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../acorn/bin/acorn
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../acorn/bin/acorn" "$@"
++else 
++  exec node  "$basedir/../acorn/bin/acorn" "$@"
++fi
+Index: frontend/node_modules/.bin/detect
+===================================================================
+diff --git a/frontend/node_modules/.bin/detect b/frontend/node_modules/.bin/detect
+--- a/frontend/node_modules/.bin/detect	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/detect	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../detect-port-alt/bin/detect-port
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../detect-port-alt/bin/detect-port" "$@"
++else 
++  exec node  "$basedir/../detect-port-alt/bin/detect-port" "$@"
++fi
+Index: frontend/node_modules/.bin/esvalidate
+===================================================================
+diff --git a/frontend/node_modules/.bin/esvalidate b/frontend/node_modules/.bin/esvalidate
+--- a/frontend/node_modules/.bin/esvalidate	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/esvalidate	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../esprima/bin/esvalidate.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../esprima/bin/esvalidate.js" "$@"
++else 
++  exec node  "$basedir/../esprima/bin/esvalidate.js" "$@"
++fi
+Index: frontend/node_modules/.bin/js-yaml
+===================================================================
+diff --git a/frontend/node_modules/.bin/js-yaml b/frontend/node_modules/.bin/js-yaml
+--- a/frontend/node_modules/.bin/js-yaml	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/js-yaml	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../js-yaml/bin/js-yaml.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../js-yaml/bin/js-yaml.js" "$@"
++else 
++  exec node  "$basedir/../js-yaml/bin/js-yaml.js" "$@"
++fi
+Index: frontend/node_modules/.bin/jiti
+===================================================================
+diff --git a/frontend/node_modules/.bin/jiti b/frontend/node_modules/.bin/jiti
+--- a/frontend/node_modules/.bin/jiti	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/jiti	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../jiti/bin/jiti.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../jiti/bin/jiti.js" "$@"
++else 
++  exec node  "$basedir/../jiti/bin/jiti.js" "$@"
++fi
+Index: frontend/node_modules/.bin/jest
+===================================================================
+diff --git a/frontend/node_modules/.bin/jest b/frontend/node_modules/.bin/jest
+--- a/frontend/node_modules/.bin/jest	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/jest	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../jest/bin/jest.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../jest/bin/jest.js" "$@"
++else 
++  exec node  "$basedir/../jest/bin/jest.js" "$@"
++fi
+Index: frontend/node_modules/.bin/node-which
+===================================================================
+diff --git a/frontend/node_modules/.bin/node-which b/frontend/node_modules/.bin/node-which
+--- a/frontend/node_modules/.bin/node-which	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/node-which	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../which/bin/node-which
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../which/bin/node-which" "$@"
++else 
++  exec node  "$basedir/../which/bin/node-which" "$@"
++fi
+Index: frontend/node_modules/.bin/nanoid
+===================================================================
+diff --git a/frontend/node_modules/.bin/nanoid b/frontend/node_modules/.bin/nanoid
+--- a/frontend/node_modules/.bin/nanoid	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/nanoid	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../nanoid/bin/nanoid.cjs
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../nanoid/bin/nanoid.cjs" "$@"
++else 
++  exec node  "$basedir/../nanoid/bin/nanoid.cjs" "$@"
++fi
+Index: frontend/node_modules/.bin/mime
+===================================================================
+diff --git a/frontend/node_modules/.bin/mime b/frontend/node_modules/.bin/mime
+--- a/frontend/node_modules/.bin/mime	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/mime	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../mime/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../mime/cli.js" "$@"
++else 
++  exec node  "$basedir/../mime/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/lz-string
+===================================================================
+diff --git a/frontend/node_modules/.bin/lz-string b/frontend/node_modules/.bin/lz-string
+--- a/frontend/node_modules/.bin/lz-string	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/lz-string	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../lz-string/bin/bin.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../lz-string/bin/bin.js" "$@"
++else 
++  exec node  "$basedir/../lz-string/bin/bin.js" "$@"
++fi
+Index: frontend/node_modules/acorn-globals/node_modules/.bin/acorn
+===================================================================
+diff --git a/frontend/node_modules/acorn-globals/node_modules/.bin/acorn b/frontend/node_modules/acorn-globals/node_modules/.bin/acorn
+--- a/frontend/node_modules/acorn-globals/node_modules/.bin/acorn	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/acorn-globals/node_modules/.bin/acorn	(date 1763023007129)
+@@ -1,1 +1,16 @@
+-../acorn/bin/acorn
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../acorn/bin/acorn" "$@"
++else 
++  exec node  "$basedir/../acorn/bin/acorn" "$@"
++fi
+Index: frontend/node_modules/.bin/sucrase
+===================================================================
+diff --git a/frontend/node_modules/.bin/sucrase b/frontend/node_modules/.bin/sucrase
+--- a/frontend/node_modules/.bin/sucrase	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/sucrase	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../sucrase/bin/sucrase
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../sucrase/bin/sucrase" "$@"
++else 
++  exec node  "$basedir/../sucrase/bin/sucrase" "$@"
++fi
+Index: frontend/node_modules/.bin/semver
+===================================================================
+diff --git a/frontend/node_modules/.bin/semver b/frontend/node_modules/.bin/semver
+--- a/frontend/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/semver	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/.bin/regjsparser
+===================================================================
+diff --git a/frontend/node_modules/.bin/regjsparser b/frontend/node_modules/.bin/regjsparser
+--- a/frontend/node_modules/.bin/regjsparser	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/regjsparser	(date 1763023007127)
+@@ -1,1 +1,16 @@
+-../regjsparser/bin/parser
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../regjsparser/bin/parser" "$@"
++else 
++  exec node  "$basedir/../regjsparser/bin/parser" "$@"
++fi
+Index: frontend/node_modules/.bin/update-browserslist-db
+===================================================================
+diff --git a/frontend/node_modules/.bin/update-browserslist-db b/frontend/node_modules/.bin/update-browserslist-db
+--- a/frontend/node_modules/.bin/update-browserslist-db	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/update-browserslist-db	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../update-browserslist-db/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../update-browserslist-db/cli.js" "$@"
++else 
++  exec node  "$basedir/../update-browserslist-db/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/tsserver
+===================================================================
+diff --git a/frontend/node_modules/.bin/tsserver b/frontend/node_modules/.bin/tsserver
+--- a/frontend/node_modules/.bin/tsserver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/tsserver	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../typescript/bin/tsserver
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../typescript/bin/tsserver" "$@"
++else 
++  exec node  "$basedir/../typescript/bin/tsserver" "$@"
++fi
+Index: frontend/node_modules/@babel/eslint-parser/node_modules/.bin/semver
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>../semver/bin/semver.js
+===================================================================
+diff --git a/frontend/node_modules/@babel/eslint-parser/node_modules/.bin/semver b/frontend/node_modules/@babel/eslint-parser/node_modules/.bin/semver
+--- a/frontend/node_modules/@babel/eslint-parser/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/@babel/eslint-parser/node_modules/.bin/semver	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>../semver/bin/semver.js
+===================================================================
+diff --git a/frontend/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver b/frontend/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver
+--- a/frontend/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../semver/bin/semver.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../semver/bin/semver.js" "$@"
++else 
++  exec node  "$basedir/../semver/bin/semver.js" "$@"
++fi
+Index: frontend/node_modules/.bin/autoprefixer
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>../autoprefixer/bin/autoprefixer
+===================================================================
+diff --git a/frontend/node_modules/.bin/autoprefixer b/frontend/node_modules/.bin/autoprefixer
+--- a/frontend/node_modules/.bin/autoprefixer	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/autoprefixer	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../autoprefixer/bin/autoprefixer
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../autoprefixer/bin/autoprefixer" "$@"
++else 
++  exec node  "$basedir/../autoprefixer/bin/autoprefixer" "$@"
++fi
+Index: frontend/node_modules/.bin/ejs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>../ejs/bin/cli.js
+===================================================================
+diff --git a/frontend/node_modules/.bin/ejs b/frontend/node_modules/.bin/ejs
+--- a/frontend/node_modules/.bin/ejs	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/ejs	(date 1763023007125)
+@@ -1,1 +1,16 @@
+-../ejs/bin/cli.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../ejs/bin/cli.js" "$@"
++else 
++  exec node  "$basedir/../ejs/bin/cli.js" "$@"
++fi
+Index: frontend/node_modules/.bin/escodegen
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>../escodegen/bin/escodegen.js
+===================================================================
+diff --git a/frontend/node_modules/.bin/escodegen b/frontend/node_modules/.bin/escodegen
+--- a/frontend/node_modules/.bin/escodegen	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/escodegen	(date 1763023007126)
+@@ -1,1 +1,16 @@
+-../escodegen/bin/escodegen.js
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../escodegen/bin/escodegen.js" "$@"
++else 
++  exec node  "$basedir/../escodegen/bin/escodegen.js" "$@"
++fi
+Index: frontend/node_modules/.bin/terser
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>../terser/bin/terser
+===================================================================
+diff --git a/frontend/node_modules/.bin/terser b/frontend/node_modules/.bin/terser
+--- a/frontend/node_modules/.bin/terser	(revision 52a2a6c414a397259be7ae1aaa64a8af3033a59d)
++++ b/frontend/node_modules/.bin/terser	(date 1763023007128)
+@@ -1,1 +1,16 @@
+-../terser/bin/terser
+\ No newline at end of file
++#!/bin/sh
++basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
++
++case `uname` in
++    *CYGWIN*|*MINGW*|*MSYS*)
++        if command -v cygpath > /dev/null 2>&1; then
++            basedir=`cygpath -w "$basedir"`
++        fi
++    ;;
++esac
++
++if [ -x "$basedir/node" ]; then
++  exec "$basedir/node"  "$basedir/../terser/bin/terser" "$@"
++else 
++  exec node  "$basedir/../terser/bin/terser" "$@"
++fi
